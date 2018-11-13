@@ -27,6 +27,16 @@
     font-size: 17px;
   }
 
+  .topnav b {
+    float: left;
+    display: block;
+    color: #FFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
 
  a:visited {
     background-color: #6D7B8D;
@@ -39,15 +49,6 @@
   }
 
 
-  .topnav b {
-    float: left;
-    display: block;
-    color: #FFF;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
 
 
   * {box-sizing: border-box;}
@@ -88,6 +89,75 @@
     animation-duration: 1.5s;
   }
 
+  /* The navigation menu */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navigation links */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The subnavigation menu */
+.subnav {
+  float: right;
+  overflow: hidden;
+}
+
+/* Subnav button */
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Add a white background color to navigation links on hover */
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #FFF;
+  color: #6D7B8D;
+}
+
+/* Style the subnav content - positioned absolute */
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #6D7B8D;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Style the subnav links */
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+/* Add a grey background color on hover */
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+/* When you move the mouse over the subnav container, open the subnav content */
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+
   @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
@@ -105,18 +175,29 @@
 </style>
 </head>
 <body>
+  <div class="topnav" id="mytopnav">
+  <a href="#home" class="active">Home</a>
+  <div class="topnav">
+  <div class="topnav-content">
+      <b href="#actress, berlin">Actress, Berlin</b>
+      <a href="#home" class="active">Home</a>
+      <a href="about_us.html">About Me</a>
+      <a href="#biographie">Biographie</a>
+      <a href="#projects">Projects</a>
+      <a href="#news">News</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </div>
+        </div>
 
-  <div class="topnav" id="myTopnav">
-    <b href="#actress, berlin">Actress, Berlin</b>
-    <a href="#home" class="active">Home</a>
-    <a href="#About Me">About Me</a>
-    <a href="#biographie">Biographie</a>
-    <a href="#projects">Projects</a>
-    <a href="#news">News</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <div class="subnav">
+    <button class="subnavbtn">About Me <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#Deutsch">Deutsch</a>
+      <a href="#English">Englisch</a>
+    </div>
   </div>
+</div>
 
       <div class="slideshow-container">
 
