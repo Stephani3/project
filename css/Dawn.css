@@ -1,10 +1,63 @@
+#contactForm {
+  margin: 0 auto;
+}
 
+#contactForm input, textarea {
+  letter-spacing: 2px;
+  font: 200 1em/1.1em "Courier New", Monospace;
 
-h1 {
-    font-family: "Courier New", Monospace;
-    color: #6D7B8D;
-    text-align: left;
-  }
+  color: #6D7B8D;
+  background-color: RGBA(204, 204, 204, .1);
+
+  outline: none; border: none;
+
+  top:50px;
+  margin-left: 500px;
+  margin-right: 50px;
+  width: 30%;
+  padding: 50px 10px;
+}
+
+#contactForm textarea {
+  height: 150px;
+}
+
+#contactForm *:focus {
+  background-color: RGBA(254, 191, 4, 1);
+}
+
+#contactForm *:hover {
+  background-color: RGBA(254, 191, 4, 1);
+}
+
+::-webkit-input-placeholder {
+  color: #777;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #777;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #777;
+}
+
+:-ms-input-placeholder {
+  color: #777;
+}
+
+h1, .contact {
+  font-family: "Courier New", Monospace;
+  color: #6D7B8D;
+  text-align: left;
+}
+
+h2 {
+  text-align: Center;
+  font-family: "Courier New", Monospace;
+  color: #6D7B8D;
+}
+
 
 p {
   font-family: "Courier New", Monospace;
@@ -14,11 +67,11 @@ p {
 }
 
 .center{
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 30%;
-padding: 0px 10px;
+  top:50px;
+  margin-left: 500px;
+  margin-right: 50px;
+  width: 30%;
+  padding: 50px 10px;
 }
 
 h1, .signup {
@@ -28,12 +81,12 @@ h1, .signup {
 
 
 .signup {
-position: absolute;
-top:320px;
-left:800px;
-width:500px;
-height:300px;
-text-align: center;
+  position: absolute;
+  top:320px;
+  left:800px;
+  width:500px;
+  height:300px;
+  text-align: center;
 }
 
 .topnav {
@@ -103,7 +156,7 @@ img {vertical-align: middle;}
 }
 
 .active {
-  background-color: #717171;
+  background-color: #6D7B8D;
 }
 
 /* Fading animation */

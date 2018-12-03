@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
-<head>
 
+<head>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -18,18 +17,18 @@
 
   <link rel="stylesheet" href="css/Dawn.css">
 
-  <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+
 <body>
 
-  <h1>Dawn Patricia Robinson</h1>
+  <h1>Contact Me</h1>
 
   <div class="topnav">
     <div class="topnav-content">
-      <span class="nav-info">Actress, Berlin</span>
-      <a href="#home" class="active">Home</a>
+
+      <a href="Index.html" class="active">Home</a>
       <div class="dropdown-item">
         <span>About Me</span>
         <ul class="dropdown">
@@ -51,69 +50,25 @@
 
 
     </div>
-
-    <div class="signup">
-      <h2> Currently playing in Aschenputtel at Junges Theater Karlsruhe</h2>
-      <p>Fancy hearing about everything else I get up to? You know the drill...</p>
-      <input type="email" placeholder="Your email">
-      <input type="submit">
-    </div>
-
-
     <div>
       <!-- Add font awesome icons -->
       <a href="https://www.facebook.com/iamnotthecopacabana/" class="fa fa-facebook"></a>
       <a href="#" class="fa fa-twitter"></a>
     </div>
 
+    <form id="contactForm" onsubmit="return validate()" action="contact.php" method="post">
+
+      <input class="formInput" type="text" id="name" name="name" autocorrect="off" placeholder="Name"/>
+      <input class="formInput" type="email" name="email" id="email" autocapitalize="off" autocorrect="off" placeholder="Email"/>
+      <textarea class="formInput" name="message" id="message" placeholder="Message"></textarea>
+
+      <br>
+      <input class="submitForm" type="reset" value="Clear your message" />
+      <input class="submitForm" type="submit" value="Send"/>
+
+    </form>
+
   </div>
 
-  <div class="col-sm-4">
-    <div class="slideshow-container">
 
-      <div class="mySlides fade">
-        <img src="Dawn_face.replacement.jpg" style="width:100%">
-
-      </div>
-
-      <div class="mySlides fade">
-        <img src="Dawn_face2.new.jpg" style="width:100%">
-
-      </div>
-
-      <div class="mySlides fade">
-        <img src="Dawn_body3.new.jpeg" style="width:100%">
-      </div>
-    </div>
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-    </script>
-
-  </body>
-  </html>
+</body>
